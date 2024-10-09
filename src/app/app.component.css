@@ -58,3 +58,7 @@ button{
 .from-group-button div:last-child{
   width: 50%;
 }
+
+span{
+  color: red;
+}

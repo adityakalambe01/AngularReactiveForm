@@ -17,7 +17,7 @@ export class AppComponent {
   zips:number[] = [411045, 444606, 444555, 444555, 444555, 444555, 444555];
 
   studentForm: FormGroup  = new FormGroup({
-    firstName: new FormControl('',[Validators.required]),
+    firstName: new FormControl('',[Validators.required, Validators.minLength(4)]),
     lastName: new FormControl('',[Validators.required]),
     age: new FormControl('',[Validators.required]),
     grade: new FormControl('',[Validators.required]),

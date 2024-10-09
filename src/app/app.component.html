@@ -9,6 +9,13 @@
         <div>
           <input type="text" id="firstName" formControlName="firstName">
         </div>
+        @if (studentForm.controls['firstName'].touched || studentForm.controls['firstName'].dirty) {
+          @if (studentForm.controls['firstName'].errors?.['required']) {
+            <span>Required</span>
+          }@else if (studentForm.controls['firstName'].errors?.['minlength']) {
+            <span>Minimum length is 4</span>
+          }
+        }
       </div>
       <div class="from-group">
         <div>
