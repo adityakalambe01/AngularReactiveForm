@@ -1,0 +1,72 @@
+<div class="main-container">
+  <div id="form-wrapper">
+    <h1>Regestration Form</h1>
+    <form [formGroup]="studentForm">
+      <div class="from-group">
+        <div>
+          <label for="firstName">First Name</label>
+        </div>
+        <div>
+          <input type="text" id="firstName" formControlName="firstName">
+        </div>
+      </div>
+      <div class="from-group">
+        <div>
+          <label for="lastName">Last Name</label>
+        </div>
+        <div>
+          <input type="text" id="lastName" formControlName="lastName">
+        </div>
+      </div>
+      <div class="from-group">
+        <div>
+          <label for="age">Age</label>
+        </div>
+        <div>
+          <input type="text" id="age" formControlName="age">
+        </div>
+      </div>
+      <div class="from-group">
+        <div>
+          <label for="grade">Grade</label>
+        </div>
+        <div>
+          <input type="text" id="grade" formControlName="grade">
+        </div>
+      </div>
+      <div class="from-group">
+        <div>
+          <label for="address">Address</label>
+        </div>
+        <div>
+          <select formControlName="city">
+            <option selected disabled value="">Choose...</option>
+            <option *ngFor="let city of cities" [value]="city">{{city}}</option>
+          </select>
+          <select formControlName="zip">
+            <option selected disabled value="">Choose...</option>
+            @for(pin of zips; track $index){
+              <option [value]="pin">{{pin}}</option>
+            }
+
+          </select>
+        </div>
+      </div>
+      <div class="from-group-button">
+        <div>
+          <button id="reset" (click)="onReset()">Reset</button>
+        </div>
+        <div>
+          <button id="submit" [disabled]="studentForm.invalid" (click)="onSubmit()">Submit</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+  <div id="form-data">
+    <h2>Form Data</h2>
+    <pre>
+      {{studentFormValueFromFrom|json}}
+    </pre>
+  </div>
+</div>

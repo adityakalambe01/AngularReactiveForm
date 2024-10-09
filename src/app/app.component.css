@@ -1,0 +1,60 @@
+.main-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+#form-wrapper{
+  width: 50%;
+  padding: 20px;
+  border-radius: 5px;
+  display: inherit;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form{
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.342);
+  border-radius: 25px;
+}
+form >div{
+  margin-bottom: 20px;
+}
+label, input, select{
+  font-size: 18px;
+  line-height: 1.5;
+}
+select{
+  width: 50%;
+}
+label{
+  font-weight: bold;
+}
+input:focus{
+  outline: none;
+}
+
+.form-group{
+  display: inherit;
+  flex-direction: column;
+}
+
+.from-group-button{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#form-data{
+  width: 25%;
+}
+button{
+  padding: 6px 12px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.from-group-button div:last-child{
+  width: 50%;
+}
